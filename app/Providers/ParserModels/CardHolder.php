@@ -16,9 +16,15 @@ class CardHolder extends Parser
     public $client_code;
     public $cho_title;
     public $cho_first_name;
+    public $cho_middle_name;
+    public $cho_last_name;
     public $cho_dob;
+    public $cho_email;
+    public $cho_tel_1;
+    public $cho_tel_2;
     public $cho_add_line_1;
     public $cho_add_line_2;
+    public $cho_add_line_3;
     public $cho_add_town;
     public $cho_add_postcode;
     public $cho_country;

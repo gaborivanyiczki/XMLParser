@@ -30,6 +30,9 @@ class CardIssue extends Card
     public $disp_add_town;
     public $disp_add_postcode;
     public $disp_country;
+    public $fl_prof_ext_ref;
+    public $account_no;
+    public $card_masked_pan;
 
 
 }

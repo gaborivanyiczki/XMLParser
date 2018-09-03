@@ -19,6 +19,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('User', require('./components/User.vue'));
+Vue.component('Role', require('./components/Role.vue'));
 Vue.use(Toastr);
 
 

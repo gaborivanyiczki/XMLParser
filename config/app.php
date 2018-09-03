@@ -149,7 +149,8 @@ return [
         Orchestra\Parser\XmlServiceProvider::class,
         Vmorozov\FileUploads\FileUploadsServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-
+        Zizaco\Entrust\EntrustServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -215,6 +216,8 @@ return [
         'XmlParser' => Orchestra\Parser\Xml\Facade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
 

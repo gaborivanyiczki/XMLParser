@@ -2,10 +2,15 @@
 
 return [
     'requests' => [
+        'Sponsor',
         'NewCardHolder',
         'CardIssue',
         'CardLoad',
-        'ActivateCard'
+        'ActivateCard',
+        'AdditionalCard',
+        'CardReissue',
+        'UpdateCardHolder',
+        'Client'
     ],
     'namespace' => 'App\\Providers\\ParserModels\\'
 

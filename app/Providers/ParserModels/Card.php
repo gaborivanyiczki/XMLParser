@@ -21,4 +21,5 @@ class Card extends Parser
     public $delivery_code;
 
 
+
 }

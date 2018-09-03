@@ -12,7 +12,9 @@
         "laravelcollective/html": "~5.0",
         "orchestra/parser": "~3.0",
         "vmorozov/laravel-file-uploads": "^1.1",
-        "vyuldashev/xml-to-array": "^1.0"
+        "vyuldashev/xml-to-array": "^1.0",
+        "yajra/laravel-datatables-oracle": "^8.7",
+        "zizaco/entrust": "dev-laravel-5"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

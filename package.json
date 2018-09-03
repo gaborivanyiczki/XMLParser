@@ -31,6 +31,7 @@
   "dependencies": {
     "ajv": "^6.0.0",
     "dropzone": "^5.5.1",
+    "flag-icon-css": "^3.0.0",
     "vue-toastr": "^2.0.14"
   }
 }

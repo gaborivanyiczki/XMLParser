@@ -7,6 +7,7 @@ use App\Providers\ParserHandler;
 use App\Providers\ParserModels\ActivateCard;
 use App\Providers\ParserModels\CardIssue;
 use App\Providers\ParserModels\CardLoad;
+use App\Providers\ParserModels\Sponsor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
@@ -30,25 +31,28 @@ class FilesController extends Controller
 
     public function store(Request $request){
 
-        $fileObj = $request->file('file');
+        foreach ($request->file('file') as $file) {
 
-        $fileName = $fileObj->getClientOriginalName();
+            $fileObj = $file;
 
-        $fileInDB = File::where('file_name',$fileName)->first();
+            $fileName = $fileObj->getClientOriginalName();
 
-        if ($fileInDB == null){
-            $file = File::create([
-                'file_name' => $fileName,
-                'path' => 'user-uploads',
-                'user_id' => Auth::user()->id
-            ]);
-        }else{
-            return redirect()->back()->withErrors("File ".$fileName." exists in the db.");
+            $fileInDB = File::where('file_name', $fileName)->first();
+
+            if ($fileInDB == null) {
+                $file = File::create([
+                    'file_name' => $fileName,
+                    'path' => 'user-uploads',
+                    'user_id' => Auth::user()->id
+                ]);
+
+            } else {
+                return redirect()->back()->withErrors("File " . $fileName . " exists in the db.");
+            }
+
+            $path = Uploader::uploadFile($fileObj, 'user-uploads');
+
         }
-
-        $path = Uploader::uploadFile($fileObj, 'user-uploads');
-
-
         return redirect()->back()->with('message','File uploaded successfully.');
     }
 
@@ -60,15 +64,9 @@ class FilesController extends Controller
 
         $path = Config::get('constants.namespace');
 
-        $encode = ParserHandler::parseDocument($xml_string,$modelCollection,$path);
+        ParserHandler::storeContent($id,$xml_string,$modelCollection,$path);
 
-        echo "<pre>";
-        var_dump($encode);
-        echo "</pre>";
-
-
-
-
+        return redirect()->route('home')->with('message', 'File parsed successfully.');
     }
 
     public function destroy($id){

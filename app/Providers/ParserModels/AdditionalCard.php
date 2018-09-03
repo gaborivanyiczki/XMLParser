@@ -23,5 +23,7 @@ class AdditionalCard extends Card
     public $disp_add_town;
     public $disp_add_postcode;
     public $disp_country;
+    public $account_no;
+    public $card_masked_pan;
 
 }

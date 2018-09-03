@@ -16,4 +16,6 @@ class CardReissue extends Card
     public $crd_seq_no_dest;
     public $override_fee;
     public $override_block;
+    public $account_no;
+    public $card_masked_pan;
 }

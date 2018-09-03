@@ -7,7 +7,15 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" style="font-weight: bold;">Files manager</div>
-
+                    <div class="card-body">
+                        @if(count($errors) > 0)
+                            <div class="alert alert-danger">
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}
+                                @endforeach
+                            </div>
+                        @endif
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>

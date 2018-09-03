@@ -43,7 +43,6 @@
           box-sizing: border-box;
 }
 
-
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -6396,31 +6395,6 @@ button.close {
   right: 0;
   border-width: 0.4rem 0.4rem 0.4rem 0;
   border-right-color: #000;
-}
-
-.btn-client{
-  background-color: antiquewhite;
-  font-weight: bold;
-}
-.btn-ch{
-  background-color: cornflowerblue;
-  font-weight: bold;
-}
-.btn-ci{
-  background-color: whitesmoke;
-  font-weight: bold;
-}
-.btn-cr{
-  background-color: violet;
-  font-weight: bold;
-}
-.btn-aci{
-  background-color: turquoise;
-  font-weight: bold;
-}
-.btn-ac{
-  background-color: yellowgreen;
-  font-weight: bold;
 }
 
 .bs-tooltip-bottom,

@@ -1,0 +1,29 @@
+.btn-client{
+    background-color: antiquewhite;
+    font-weight: bold;
+}
+
+.btn-ch{
+    background-color: aquamarine;
+    font-weight: bold;
+}
+
+.btn-ci{
+    background-color: crimson;
+    font-weight: bold;
+}
+
+.btn-cr{
+    background-color: chartreuse;
+    font-weight: bold;
+}
+
+.btn-aci{
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.btn-ac{
+    background-color: violet;
+    font-weight: bold;
+}
